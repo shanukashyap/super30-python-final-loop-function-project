@@ -1,7 +1,7 @@
 """Menu-driven Banking Application."""
 
 
-dbalance = 10000
+balance = 10000
 transactions = []
 
 
