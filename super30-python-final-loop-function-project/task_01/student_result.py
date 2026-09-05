@@ -6,8 +6,19 @@ def accept_marks():
     marks = []
 
     for i in range(1, 6):
-        mark = float(input(f"Enter marks for subject {i}: "))
-        marks.append(mark)
+
+        while True:
+            try:
+                mark = float(input(f"Enter marks for subject {i}: "))
+
+                if 0 <= mark <= 100:
+                    marks.append(mark)
+                    break
+
+                print("Marks must be between 0 and 100.")
+
+            except ValueError:
+                print("Invalid input. Please enter a number.")
 
     return marks
 
